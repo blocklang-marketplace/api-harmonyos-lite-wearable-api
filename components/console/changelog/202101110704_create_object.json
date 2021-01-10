@@ -1,0 +1,78 @@
+{
+    "id": "create_console",
+    "author": "jinzw",
+    "changes": [
+        {
+            "createObject": {
+                "name": "console",
+                "functions": [
+                    {
+                        "name": "debug",
+                        "parameters": [
+                            {
+                                "name": "message",
+                                "type": "string",
+                                "optional": false,
+                                "variable": false,
+                                "description": "表示要打印的文本信息"
+                            }
+                        ],
+                        "returnType": "void"
+                    },
+                    {
+                        "name": "log",
+                        "parameters": [
+                            {
+                                "name": "message",
+                                "type": "string",
+                                "optional": false,
+                                "variable": false,
+                                "description": "表示要打印的文本信息"
+                            }
+                        ],
+                        "returnType": "void"
+                    },
+                    {
+                        "name": "info",
+                        "parameters": [
+                            {
+                                "name": "message",
+                                "type": "string",
+                                "optional": false,
+                                "variable": false,
+                                "description": "表示要打印的文本信息"
+                            }
+                        ],
+                        "returnType": "void"
+                    },
+                    {
+                        "name": "warn",
+                        "parameters": [
+                            {
+                                "name": "message",
+                                "type": "string",
+                                "optional": false,
+                                "variable": false,
+                                "description": "表示要打印的文本信息"
+                            }
+                        ],
+                        "returnType": "void"
+                    },
+                    {
+                        "name": "error",
+                        "parameters": [
+                            {
+                                "name": "message",
+                                "type": "string",
+                                "optional": false,
+                                "variable": false,
+                                "description": "表示要打印的文本信息"
+                            }
+                        ],
+                        "returnType": "void"
+                    }
+                ]
+            }
+        }
+    ]
+}
