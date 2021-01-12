@@ -1,9 +1,6 @@
 {
     "name": "api-harmonyos-lite-wearable-api",
-    "version": "0.0.1",
     "displayName": "HarmonyOS lite wearable API description",
     "category": "ClientAPI",
-    "component": [
-        "components/console"
-    ]
+    "repo": "API"
 }

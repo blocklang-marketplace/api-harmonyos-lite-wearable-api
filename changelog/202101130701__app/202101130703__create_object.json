@@ -1,0 +1,19 @@
+{
+    "id": "create_app",
+    "author": "jinzw",
+    "changes": [{
+        "createObject": {
+            "name": "app",
+            "module": "@system.app",
+            "functions": [{
+                "name": "getInfo",
+                "parameters": [],
+                "returnType": "AppInfo"
+            }, {
+                "name": "terminate",
+                "parameters": [],
+                "returnType": "void"
+            }]
+        }
+    }]
+}
