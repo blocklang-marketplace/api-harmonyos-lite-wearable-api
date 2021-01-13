@@ -1,0 +1,24 @@
+{
+    "id": "create_router_params",
+    "author": "jinzw",
+    "changes": [
+        {
+            "createSchema": {
+                "name": "RouterParams",
+                "type": "object",
+                "properties": [
+                    {
+                        "name": "uri",
+                        "type": "string",
+                        "description": "目标页面的uri"
+                    },
+                    {
+                        "name": "params",
+                        "type": "object",
+                        "description": "传递给目标页面的参数"
+                    }
+                ]
+            }
+        }
+    ]
+}

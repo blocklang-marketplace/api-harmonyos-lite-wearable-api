@@ -1,0 +1,26 @@
+{
+    "id": "create_router",
+    "author": "jinzw",
+    "changes": [
+        {
+            "createObject": {
+                "name": "router",
+                "moudle": "@system.router",
+                "functions": [
+                    {
+                        "name": "replace",
+                        "parameters": [
+                            {
+                                "name": "params",
+                                "type": "RouterParams",
+                                "optional": false,
+                                "variable": false
+                            }
+                        ],
+                        "returnType": "void"
+                    }
+                ]
+            }
+        }
+    ]
+}
