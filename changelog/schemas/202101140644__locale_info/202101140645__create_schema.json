@@ -1,0 +1,30 @@
+{
+    "id": "create_locale_info",
+    "author": "jinzw",
+    "changes": [
+        {
+            "createSchema": {
+                "name": "LocaleInfo",
+                "type": "object",
+                "properties": [
+                    {
+                        "name": "language",
+                        "type": "string",
+                        "description": "语言"
+                    },
+                    {
+                        "name": "countryOrRegion",
+                        "type": "string",
+                        "description": "国家或地区"
+                    },
+                    {
+                        "name": "dir",
+                        "type": "string",
+                        "description": "文字布局方向",
+                        "enum": ["ltr", "rtl"]
+                    }
+                ]
+            }
+        }
+    ]
+}

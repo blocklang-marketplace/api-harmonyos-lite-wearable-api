@@ -1,0 +1,19 @@
+{
+    "id": "create_configuration",
+    "author": "jinzw",
+    "changes": [
+        {
+            "createObject": {
+                "name": "configuration",
+                "moudle": "@system.configuration",
+                "functions": [
+                    {
+                        "name": "getLocale",
+                        "parameters": [],
+                        "returnType": "LocaleInfo"
+                    }
+                ]
+            }
+        }
+    ]
+}
