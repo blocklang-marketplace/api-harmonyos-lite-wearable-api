@@ -1,0 +1,89 @@
+{
+    "id": "create_timer",
+    "author": "jinzw",
+    "changes": [
+        {
+            "createObject": {
+                "name": "timer",
+                "description": "定时器到期后执行一个函数",
+                "functions": [
+                    {
+                        "name": "setTimeout",
+                        "parameters": [
+                            {
+                                "name": "handler",
+                                "type": "function",
+                                "optional": false,
+                                "variable": false,
+                                "description": "定时器到期后执行的函数"
+                            },
+                            {
+                                "name": "delay",
+                                "type": "number",
+                                "optional": true,
+                                "variable": false,
+                                "description": "延迟的毫秒数"
+                            },
+                            {
+                                "name": "args",
+                                "type": "any",
+                                "optional": true,
+                                "variable": true,
+                                "description": "传给handler的附加参数"
+                            }
+                        ],
+                        "returnType": "number"
+                    },
+                    {
+                        "name": "clearTimeout",
+                        "parameters": [{
+                            "name": "timeoutID",
+                            "type": "number",
+                            "optional": false,
+                            "variable": false,
+                            "description": "要取消定时器的ID"
+                        }]
+                    },
+                    {
+                        "name": "setInterval",
+                        "description": "重复调用一个函数",
+                        "parameters": [
+                            {
+                                "name": "handler",
+                                "type": "function",
+                                "optional": false,
+                                "variable": false,
+                                "description": "定时器到期后执行的函数"
+                            },
+                            {
+                                "name": "delay",
+                                "type": "number",
+                                "optional": true,
+                                "variable": false,
+                                "description": "延迟的毫秒数"
+                            },
+                            {
+                                "name": "args",
+                                "type": "any",
+                                "optional": true,
+                                "variable": true,
+                                "description": "传给handler的附加参数"
+                            }
+                        ],
+                        "returnType": "number"
+                    },
+                    {
+                        "name": "clearInterval",
+                        "parameters": [{
+                            "name": "intervalID",
+                            "type": "number",
+                            "optional": false,
+                            "variable": false,
+                            "description": "要取消的重复定时器的ID"
+                        }]
+                    }
+                ]
+            }
+        }
+    ]
+}
