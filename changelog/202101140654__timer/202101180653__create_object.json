@@ -5,7 +5,7 @@
         {
             "createObject": {
                 "name": "timer",
-                "description": "定时器到期后执行一个函数",
+                "description": "定时器",
                 "functions": [
                     {
                         "name": "setTimeout",

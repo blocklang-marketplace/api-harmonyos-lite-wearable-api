@@ -1,0 +1,51 @@
+{
+    "id": "create_storage_delete_param",
+    "author": "jinzw",
+    "changes": [
+        {
+            "createSchema": {
+                "name": "StorageDeleteParam",
+                "type": "object",
+                "properties": [
+                    {
+                        "name": "key",
+                        "type": "string",
+                        "description": "内容索引",
+                        "optional": false
+                    },
+                    {
+                        "name": "success",
+                        "type": "function",
+                        "description": "接口调用成功的回调函数",
+                        "optional": true,
+                        "parameters": []
+                    },
+                    {
+                        "name": "fail",
+                        "type": "function",
+                        "description": "接口调用失败的回调函数",
+                        "optional": true,
+                        "parameters": [{
+                            "name": "data",
+                            "type": "string",
+                            "optional": false,
+                            "variable": false
+                        }, {
+                            "name": "code",
+                            "type": "string",
+                            "optional": false,
+                            "variable": false
+                        }]
+                    },
+                    {
+                        "name": "complete",
+                        "type": "function",
+                        "description": "接口调用结束的回调函数",
+                        "optional": true,
+                        "parameters": []
+                    }
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,63 @@
+{
+    "id": "create_storage",
+    "author": "jinzw",
+    "changes": [
+        {
+            "createObject": {
+                "name": "storage",
+                "module": "@system.storage",
+                "description": "数据存储",
+                "functions": [
+                    {
+                        "name": "get",
+                        "parameters": [
+                            {
+                                "name": "object",
+                                "type": "StorageGetParam",
+                                "optional": false,
+                                "variable": false
+                            }
+                        ],
+                        "returnType": "void"
+                    },
+                    {
+                        "name": "set",
+                        "parameters": [
+                            {
+                                "name": "object",
+                                "type": "StorageSetParam",
+                                "optional": false,
+                                "variable": false
+                            }
+                        ],
+                        "returnType": "void"
+                    },
+                    {
+                        "name": "clear",
+                        "parameters": [
+                            {
+                                "name": "object",
+                                "type": "StorageClearParam",
+                                "optional": false,
+                                "variable": false
+                            }
+                        ],
+                        "returnType": "void"
+                    },
+                    {
+                        "name": "delete",
+                        "parameters": [
+                            {
+                                "name": "object",
+                                "type": "StorageDeleteParam",
+                                "optional": false,
+                                "variable": false
+                            }
+                        ],
+                        "returnType": "void"
+                    }
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,45 @@
+{
+    "id": "create_storage_clear_param",
+    "author": "jinzw",
+    "changes": [
+        {
+            "createSchema": {
+                "name": "StorageClearParam",
+                "type": "object",
+                "properties": [
+                    {
+                        "name": "success",
+                        "type": "function",
+                        "description": "接口调用成功的回调函数",
+                        "optional": true,
+                        "parameters": []
+                    },
+                    {
+                        "name": "fail",
+                        "type": "function",
+                        "description": "接口调用失败的回调函数",
+                        "optional": true,
+                        "parameters": [{
+                            "name": "data",
+                            "type": "string",
+                            "optional": false,
+                            "variable": false
+                        }, {
+                            "name": "code",
+                            "type": "string",
+                            "optional": false,
+                            "variable": false
+                        }]
+                    },
+                    {
+                        "name": "complete",
+                        "type": "function",
+                        "description": "接口调用结束的回调函数",
+                        "optional": true,
+                        "parameters": []
+                    }
+                ]
+            }
+        }
+    ]
+}

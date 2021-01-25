@@ -1,0 +1,61 @@
+{
+    "id": "create_storage_get_param",
+    "author": "jinzw",
+    "changes": [
+        {
+            "createSchema": {
+                "name": "StorageGetParam",
+                "type": "object",
+                "properties": [
+                    {
+                        "name": "key",
+                        "type": "string",
+                        "description": "内容索引",
+                        "optional": false
+                    },
+                    {
+                        "name": "default",
+                        "type": "string",
+                        "description": "key不存在则返回的默认值"
+                    },
+                    {
+                        "name": "success",
+                        "type": "function",
+                        "description": "接口调用成功的回调函数",
+                        "optional": true,
+                        "parameters": [{
+                            "name": "data",
+                            "type": "string",
+                            "optional": false,
+                            "variable": false
+                        }]
+                    },
+                    {
+                        "name": "fail",
+                        "type": "function",
+                        "description": "接口调用失败的回调函数",
+                        "optional": true,
+                        "parameters": [{
+                            "name": "data",
+                            "type": "string",
+                            "optional": false,
+                            "variable": false
+                        }, {
+                            "name": "code",
+                            "type": "string",
+                            "optional": false,
+                            "variable": false
+                        }]
+                    },
+                    {
+                        "name": "complete",
+                        "type": "function",
+                        "description": "接口调用结束的回调函数",
+                        "optional": true,
+                        "parameters": []
+                    }
+                ]
+            }
+        }
+    ]
+}
