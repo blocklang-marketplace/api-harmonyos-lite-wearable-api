@@ -1,0 +1,40 @@
+{
+    "id": "create_file_get_result",
+    "author": "jinzw",
+    "changes": [
+        {
+            "createSchema": {
+                "name": "FileGetResult",
+                "type": "object",
+                "properties": [
+                    {
+                        "name": "uri",
+                        "type": "string",
+                        "description": "文件的 uri"
+                    },
+                    {
+                        "name": "length",
+                        "type": "number",
+                        "description": "文件字节长"
+                    },
+                    {
+                        "name": "lastModifiedTime",
+                        "type": "number",
+                        "description": "文件保存时的时间戳"
+                    },
+                    {
+                        "name": "type",
+                        "type": "string",
+                        "description": "文件的类型",
+                        "enum": ["dir", "file"]
+                    },
+                    {
+                        "name": "subFiles",
+                        "type": "Array<FileGetResult>",
+                        "description": "文件列表"
+                    }
+                ]
+            }
+        }
+    ]
+}

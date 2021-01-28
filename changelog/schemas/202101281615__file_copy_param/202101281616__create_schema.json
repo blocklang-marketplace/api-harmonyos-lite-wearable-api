@@ -1,0 +1,63 @@
+{
+    "id": "create_file_copy_param",
+    "author": "jinzw",
+    "changes": [
+        {
+            "createSchema": {
+                "name": "FileCopyParam",
+                "type": "object",
+                "properties": [
+                    {
+                        "name": "srcUri",
+                        "type": "string",
+                        "description": "要拷贝的文件的uri",
+                        "optional": false
+                    },
+                    {
+                        "name": "dstUri",
+                        "type": "string",
+                        "description": "文件要拷贝到的位置的uri",
+                        "optional": false
+                    },
+                    {
+                        "name": "success",
+                        "type": "function",
+                        "description": "接口调用成功的回调函数",
+                        "optional": true,
+                        "parameters": [{
+                            "name": "uri",
+                            "type": "string",
+                            "optional": false,
+                            "variable": false,
+                            "description": "文件要拷贝到的位置的uri"
+                        }]
+                    },
+                    {
+                        "name": "fail",
+                        "type": "function",
+                        "description": "接口调用失败的回调函数",
+                        "optional": true,
+                        "parameters": [{
+                            "name": "data",
+                            "type": "string",
+                            "optional": false,
+                            "variable": false
+                        }, {
+                            "name": "code",
+                            "type": "string",
+                            "optional": false,
+                            "variable": false
+                        }]
+                    },
+                    {
+                        "name": "complete",
+                        "type": "function",
+                        "description": "接口调用结束的回调函数",
+                        "optional": true,
+                        "parameters": []
+                    }
+                ]
+            }
+        }
+    ]
+}

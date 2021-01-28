@@ -1,0 +1,57 @@
+{
+    "id": "create_file_list_param",
+    "author": "jinzw",
+    "changes": [
+        {
+            "createSchema": {
+                "name": "FileListParam",
+                "type": "object",
+                "properties": [
+                    {
+                        "name": "uri",
+                        "type": "string",
+                        "description": "目录uri",
+                        "optional": false
+                    },
+                    {
+                        "name": "success",
+                        "type": "function",
+                        "description": "接口调用成功的回调函数",
+                        "optional": true,
+                        "parameters": [{
+                            "name": "data",
+                            "type": "FileListResult",
+                            "optional": false,
+                            "variable": false,
+                            "description": "获取的文件列表信息"
+                        }]
+                    },
+                    {
+                        "name": "fail",
+                        "type": "function",
+                        "description": "接口调用失败的回调函数",
+                        "optional": true,
+                        "parameters": [{
+                            "name": "data",
+                            "type": "string",
+                            "optional": false,
+                            "variable": false
+                        }, {
+                            "name": "code",
+                            "type": "string",
+                            "optional": false,
+                            "variable": false
+                        }]
+                    },
+                    {
+                        "name": "complete",
+                        "type": "function",
+                        "description": "接口调用结束的回调函数",
+                        "optional": true,
+                        "parameters": []
+                    }
+                ]
+            }
+        }
+    ]
+}

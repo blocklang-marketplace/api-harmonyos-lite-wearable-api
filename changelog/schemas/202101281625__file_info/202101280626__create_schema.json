@@ -1,0 +1,35 @@
+{
+    "id": "create_file_info",
+    "author": "jinzw",
+    "changes": [
+        {
+            "createSchema": {
+                "name": "FileInfo",
+                "type": "object",
+                "properties": [
+                    {
+                        "name": "uri",
+                        "type": "string",
+                        "description": "文件的 uri"
+                    },
+                    {
+                        "name": "lastModifiedTime",
+                        "type": "number",
+                        "description": "文件上一次保存时的时间戳"
+                    },
+                    {
+                        "name": "length",
+                        "type": "number",
+                        "description": "文件的大小"
+                    },
+                    {
+                        "name": "type",
+                        "type": "string",
+                        "description": "文件的类型",
+                        "enum": ["dir", "file"]
+                    }
+                ]
+            }
+        }
+    ]
+}

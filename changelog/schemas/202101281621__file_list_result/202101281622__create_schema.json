@@ -1,0 +1,16 @@
+{
+    "id": "create_file_list_result",
+    "author": "jinzw",
+    "changes": [{
+        "createSchema": {
+            "name": "FileListResult",
+            "type": "object",
+            "properties": [{
+                "name": "fileList",
+                "type": "Array<FileInfo>",
+                "optional": false,
+                "description": "文件列表"
+            }]
+        }
+    }]
+}

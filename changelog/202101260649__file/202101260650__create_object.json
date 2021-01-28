@@ -1,0 +1,171 @@
+{
+    "id": "create_file",
+    "author": "jinzw",
+    "changes": [
+        {
+            "createObject": {
+                "name": "file",
+                "module": "@system.file",
+                "description": "文件存储",
+                "functions": [
+                    {
+                        "name": "move",
+                        "description": "将指定文件移动到其他指定位置",
+                        "parameters": [
+                            {
+                                "name": "object",
+                                "type": "FileMoveParam",
+                                "optional": false,
+                                "variable": false
+                            }
+                        ],
+                        "returnType": "void"
+                    },
+                    {
+                        "name": "copy",
+                        "description": "将指定文件拷贝并存储到指定位置",
+                        "parameters": [
+                            {
+                                "name": "object",
+                                "type": "FileCopyParam",
+                                "optional": false,
+                                "variable": false
+                            }
+                        ],
+                        "returnType": "void"
+                    },
+                    {
+                        "name": "list",
+                        "description": "获取指定路径下全部文件的列表",
+                        "parameters": [
+                            {
+                                "name": "object",
+                                "type": "FileListParam",
+                                "optional": false,
+                                "variable": false
+                            }
+                        ],
+                        "returnType": "void"
+                    },
+                    {
+                        "name": "get",
+                        "description": "获取指定本地文件的信息",
+                        "parameters": [
+                            {
+                                "name": "object",
+                                "type": "FileGetParam",
+                                "optional": false,
+                                "variable": false
+                            }
+                        ],
+                        "returnType": "void"
+                    },
+                    {
+                        "name": "delete",
+                        "description": "删除本地文件",
+                        "parameters": [
+                            {
+                                "name": "object",
+                                "type": "FileDeleteParam",
+                                "optional": false,
+                                "variable": false
+                            }
+                        ],
+                        "returnType": "void"
+                    },
+                    {
+                        "name": "writeText",
+                        "description": "写文本内容到指定文件",
+                        "parameters": [
+                            {
+                                "name": "object",
+                                "type": "FileWriteTextParam",
+                                "optional": false,
+                                "variable": false
+                            }
+                        ],
+                        "returnType": "void"
+                    },
+                    {
+                        "name": "writeArrayBuffer",
+                        "description": "写Buffer内容到指定文件",
+                        "parameters": [
+                            {
+                                "name": "object",
+                                "type": "FileWriteArrayBufferParam",
+                                "optional": false,
+                                "variable": false
+                            }
+                        ],
+                        "returnType": "void"
+                    },
+                    {
+                        "name": "readText",
+                        "description": "从指定文件中读取文本内容",
+                        "parameters": [
+                            {
+                                "name": "object",
+                                "type": "FileReadTextParam",
+                                "optional": false,
+                                "variable": false
+                            }
+                        ],
+                        "returnType": "void"
+                    },
+                    {
+                        "name": "readArrayBuffer",
+                        "description": "从指定文件中读取Buffer内容",
+                        "parameters": [
+                            {
+                                "name": "object",
+                                "type": "FileReadArrayBufferParam",
+                                "optional": false,
+                                "variable": false
+                            }
+                        ],
+                        "returnType": "void"
+                    },
+                    {
+                        "name": "access",
+                        "description": "判断指定文件或目录是否存在",
+                        "parameters": [
+                            {
+                                "name": "object",
+                                "type": "FileAccessParam",
+                                "optional": false,
+                                "variable": false
+                            }
+                        ],
+                        "returnType": "void"
+                    },
+                    {
+                        "name": "mkdir",
+                        "description": "创建指定目录",
+                        "parameters": [
+                            {
+                                "name": "object",
+                                "type": "FileMkdirParam",
+                                "optional": false,
+                                "variable": false
+                            }
+                        ],
+                        "returnType": "void"
+                    },
+                    {
+                        "name": "rmdir",
+                        "description": "删除指定目录",
+                        "parameters": [
+                            {
+                                "name": "object",
+                                "type": "FileRmdirParam",
+                                "optional": false,
+                                "variable": false
+                            }
+                        ],
+                        "returnType": "void"
+                    }
+                ]
+            }
+        }
+    ]
+}
