@@ -1,0 +1,58 @@
+{
+    "id": "create_file_delete_param",
+    "author": "jinzw",
+    "changes": [
+        {
+            "createSchema": {
+                "name": "FileDeleteParam",
+                "type": "object",
+                "properties": [
+                    {
+                        "name": "uri",
+                        "type": "string",
+                        "description": "删除文件的uri",
+                        "optional": false
+                    },
+                    {
+                        "name": "success",
+                        "type": "function",
+                        "description": "接口调用成功的回调函数",
+                        "optional": true,
+                        "parameters": [{
+                            "name": "data",
+                            "type": "FileGetResult",
+                            "optional": false,
+                            "variable": false,
+                            "description": "获取的文件列表信息"
+                        }]
+                    },
+                    {
+                        "name": "fail",
+                        "type": "function",
+                        "description": "接口调用失败的回调函数",
+                        "optional": true,
+                        "parameters": [{
+                            "name": "data",
+                            "type": "string",
+                            "optional": false,
+                            "variable": false
+                        }, {
+                            "name": "code",
+                            "type": "string",
+                            "optional": false,
+                            "variable": false,
+                            "enum": ["202", "300", "301"]
+                        }]
+                    },
+                    {
+                        "name": "complete",
+                        "type": "function",
+                        "description": "接口调用结束的回调函数",
+                        "optional": true,
+                        "parameters": []
+                    }
+                ]
+            }
+        }
+    ]
+}

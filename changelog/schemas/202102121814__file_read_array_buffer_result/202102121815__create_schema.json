@@ -1,0 +1,20 @@
+{
+    "id": "create_file_read_array_buffer_result",
+    "author": "jinzw",
+    "changes": [
+        {
+            "createSchema": {
+                "name": "FileReadArrayBufferResult",
+                "type": "object",
+                "description": "读取文件返回的结果",
+                "properties": [
+                    {
+                        "name": "buffer",
+                        "type": "Uint8Array",
+                        "description": "读取到的文本内容"
+                    }
+                ]
+            }
+        }
+    ]
+}

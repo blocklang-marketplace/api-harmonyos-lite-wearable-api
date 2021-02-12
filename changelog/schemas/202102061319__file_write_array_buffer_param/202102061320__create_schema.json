@@ -1,0 +1,88 @@
+{
+    "id": "create_file_write_array_buffer_param",
+    "author": "jinzw",
+    "changes": [
+        {
+            "createSchema": {
+                "name": "FileWriteArrayBufferParam",
+                "type": "object",
+                "description": "写Buffer内容到指定文件",
+                "properties": [
+                    {
+                        "name": "uri",
+                        "type": "string",
+                        "description": "本地文件uri，如果文件不存在会创建文件",
+                        "optional": false
+                    },
+                    {
+                        "name": "buffer",
+                        "type": "Uint8Array",
+                        "description": "写入的Buffer",
+                        "optional": false
+                    },
+                    {
+                        "name": "position",
+                        "type": "number",
+                        "description": "文件开始写入数据的位置的偏移量",
+                        "defaultValue": "0",
+                        "optional": true
+                    },
+                    {
+                        "name": "append",
+                        "type": "boolean",
+                        "description": "是否追加模式",
+                        "defaultValue": "false",
+                        "optional": true
+                    },
+                    {
+                        "name": "success",
+                        "type": "function",
+                        "description": "接口调用成功的回调函数",
+                        "optional": true,
+                        "parameters": [
+                            {
+                                "name": "data",
+                                "type": "FileGetResult",
+                                "optional": false,
+                                "variable": false,
+                                "description": "获取的文件列表信息"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "fail",
+                        "type": "function",
+                        "description": "接口调用失败的回调函数",
+                        "optional": true,
+                        "parameters": [
+                            {
+                                "name": "data",
+                                "type": "string",
+                                "optional": false,
+                                "variable": false
+                            },
+                            {
+                                "name": "code",
+                                "type": "string",
+                                "optional": false,
+                                "variable": false,
+                                "enum": [
+                                    "202",
+                                    "300",
+                                    "301"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "complete",
+                        "type": "function",
+                        "description": "接口调用结束的回调函数",
+                        "optional": true,
+                        "parameters": []
+                    }
+                ]
+            }
+        }
+    ]
+}

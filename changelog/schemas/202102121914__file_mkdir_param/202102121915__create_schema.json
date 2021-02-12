@@ -1,0 +1,65 @@
+{
+    "id": "create_file_mkdir_param",
+    "author": "jinzw",
+    "changes": [
+        {
+            "createSchema": {
+                "name": "FileMkdirParam",
+                "type": "object",
+                "description": "创建指定目录",
+                "properties": [
+                    {
+                        "name": "uri",
+                        "type": "string",
+                        "description": "目录的uri路径",
+                        "optional": false
+                    },
+                    {
+                        "name": "recursive",
+                        "type": "boolean",
+                        "description": "是否递归创建该目录的上级目录",
+                        "defaultValue": "false"
+                    },
+                    {
+                        "name": "success",
+                        "type": "function",
+                        "description": "接口调用成功的回调函数",
+                        "optional": true,
+                        "parameters": []
+                    },
+                    {
+                        "name": "fail",
+                        "type": "function",
+                        "description": "接口调用失败的回调函数",
+                        "optional": true,
+                        "parameters": [
+                            {
+                                "name": "data",
+                                "type": "string",
+                                "optional": false,
+                                "variable": false
+                            },
+                            {
+                                "name": "code",
+                                "type": "string",
+                                "optional": false,
+                                "variable": false,
+                                "enum": [
+                                    "202",
+                                    "300"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "complete",
+                        "type": "function",
+                        "description": "接口调用结束的回调函数",
+                        "optional": true,
+                        "parameters": []
+                    }
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,80 @@
+{
+    "id": "create_file_read_array_buffer_param",
+    "author": "jinzw",
+    "changes": [
+        {
+            "createSchema": {
+                "name": "FileReadArrayBufferParam",
+                "type": "object",
+                "description": "从指定文件中读取Buffer内容",
+                "properties": [
+                    {
+                        "name": "uri",
+                        "type": "string",
+                        "description": "本地文件uri",
+                        "optional": false
+                    },
+                    {
+                        "name": "position",
+                        "type": "number",
+                        "description": "读取的起始位置",
+                        "optional": true
+                    },
+                    {
+                        "name": "length",
+                        "type": "number",
+                        "description": "读取的长度",
+                        "optional": true
+                    },
+                    {
+                        "name": "success",
+                        "type": "function",
+                        "description": "接口调用成功的回调函数",
+                        "optional": true,
+                        "parameters": [
+                            {
+                                "name": "data",
+                                "type": "FileReadArrayBufferResult",
+                                "optional": false,
+                                "variable": false,
+                                "description": "获取的文件内容"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "fail",
+                        "type": "function",
+                        "description": "接口调用失败的回调函数",
+                        "optional": true,
+                        "parameters": [
+                            {
+                                "name": "data",
+                                "type": "string",
+                                "optional": false,
+                                "variable": false
+                            },
+                            {
+                                "name": "code",
+                                "type": "string",
+                                "optional": false,
+                                "variable": false,
+                                "enum": [
+                                    "202",
+                                    "300",
+                                    "301"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "complete",
+                        "type": "function",
+                        "description": "接口调用结束的回调函数",
+                        "optional": true,
+                        "parameters": []
+                    }
+                ]
+            }
+        }
+    ]
+}
