@@ -1,0 +1,57 @@
+{
+    "id": "create_vibrator_vibrate_param",
+    "author": "jinzw",
+    "changes": [
+        {
+            "createSchema": {
+                "name": "VibratorVibrateParam",
+                "type": "object",
+                "description": "触发振动的输入参数",
+                "properties": [
+                    {
+                        "name": "mode",
+                        "type": "string",
+                        "description": "振动的模式",
+                        "optional": true,
+                        "enum": ["long", "short"],
+                        "defaultValue": "long"
+                    },
+                    {
+                        "name": "success",
+                        "type": "function",
+                        "description": "接口调用成功的回调函数",
+                        "optional": true,
+                        "parameters": []
+                    },
+                    {
+                        "name": "fail",
+                        "type": "function",
+                        "description": "接口调用失败的回调函数",
+                        "optional": true,
+                        "parameters": [
+                            {
+                                "name": "data",
+                                "type": "string",
+                                "optional": false,
+                                "variable": false
+                            },
+                            {
+                                "name": "code",
+                                "type": "string",
+                                "optional": false,
+                                "variable": false
+                            }
+                        ]
+                    },
+                    {
+                        "name": "complete",
+                        "type": "function",
+                        "description": "接口调用结束的回调函数",
+                        "optional": true,
+                        "parameters": []
+                    }
+                ]
+            }
+        }
+    ]
+}

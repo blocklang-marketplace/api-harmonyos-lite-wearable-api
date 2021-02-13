@@ -1,0 +1,26 @@
+{
+    "id": "create_vibrator",
+    "author": "jinzw",
+    "changes": [
+        {
+            "createObject": {
+                "name": "vibrator",
+                "module": "@system.vibrator",
+                "description": "振动",
+                "functions": [
+                    {
+                        "name": "vibrate",
+                        "description": "触发设备振动",
+                        "parameters": [{
+                            "name": "object",
+                            "type": "VibratorVibrateParam",
+                            "optional": false,
+                            "variable": false
+                        }],
+                        "returnType": "void"
+                    }
+                ]
+            }
+        }
+    ]
+}
