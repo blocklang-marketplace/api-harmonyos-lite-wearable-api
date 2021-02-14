@@ -1,0 +1,55 @@
+{
+    "id": "create_sensor_get_on_body_state_param",
+    "author": "jinzw",
+    "changes": [
+        {
+            "createSchema": {
+                "name": "SensorGetOnBodyStateParam",
+                "type": "object",
+                "description": "获取设备佩戴状态",
+                "properties": [
+                    {
+                        "name": "success",
+                        "type": "function",
+                        "description": "接口调用成功的回调函数",
+                        "optional": true,
+                        "parameters": [
+                            {
+                                "name": "result",
+                                "type": "SensorGetOnBodyStateResult",
+                                "description": "设备佩戴状态"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "fail",
+                        "type": "function",
+                        "description": "接口调用失败的回调函数",
+                        "optional": true,
+                        "parameters": [
+                            {
+                                "name": "data",
+                                "type": "string",
+                                "optional": false,
+                                "variable": false
+                            },
+                            {
+                                "name": "code",
+                                "type": "string",
+                                "optional": false,
+                                "variable": false
+                            }
+                        ]
+                    },
+                    {
+                        "name": "complete",
+                        "type": "function",
+                        "description": "接口调用结束的回调函数",
+                        "optional": true,
+                        "parameters": []
+                    }
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "id": "create_sensor_subscribe_barometer_param",
+    "author": "jinzw",
+    "changes": [
+        {
+            "createSchema": {
+                "name": "SensorSubscribeBarometerParam",
+                "type": "object",
+                "description": "订阅气压传感器数据变化",
+                "properties": [
+                    {
+                        "name": "success",
+                        "type": "function",
+                        "description": "气压传感器数据改变后的回调函数",
+                        "optional": true,
+                        "parameters": [
+                            {
+                                "name": "result",
+                                "type": "SensorSubscribeBarometerResult",
+                                "description": "获取到的气压信息"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "fail",
+                        "type": "function",
+                        "description": "接口调用失败的回调函数",
+                        "optional": true,
+                        "parameters": [
+                            {
+                                "name": "data",
+                                "type": "string",
+                                "optional": false,
+                                "variable": false
+                            },
+                            {
+                                "name": "code",
+                                "type": "string",
+                                "optional": false,
+                                "variable": false
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

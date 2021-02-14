@@ -1,0 +1,48 @@
+{
+    "id": "create_sensor_subscribe_heart_rate_param",
+    "author": "jinzw",
+    "changes": [
+        {
+            "createSchema": {
+                "name": "SensorSubscribeHeartRateParam",
+                "type": "object",
+                "description": "订阅心率传感器数据变化",
+                "properties": [
+                    {
+                        "name": "success",
+                        "type": "function",
+                        "description": "心率传感器数据改变后的回调函数，默认频率5s/次",
+                        "optional": true,
+                        "parameters": [
+                            {
+                                "name": "result",
+                                "type": "SensorSubscribeHeartRateResult",
+                                "description": "获取到的心率信息"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "fail",
+                        "type": "function",
+                        "description": "接口调用失败的回调函数",
+                        "optional": true,
+                        "parameters": [
+                            {
+                                "name": "data",
+                                "type": "string",
+                                "optional": false,
+                                "variable": false
+                            },
+                            {
+                                "name": "code",
+                                "type": "string",
+                                "optional": false,
+                                "variable": false
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

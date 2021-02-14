@@ -1,0 +1,104 @@
+{
+    "id": "create_sensor",
+    "author": "jinzw",
+    "changes": [
+        {
+            "createObject": {
+                "name": "sensor",
+                "module": "@system.sensor",
+                "description": "传感器",
+                "functions": [
+                    {
+                        "name": "subscribeStepCounter",
+                        "description": "订阅计步传感器数据变化",
+                        "parameters": [
+                            {
+                                "name": "object",
+                                "type": "SensorSubscribeStepCounterParam",
+                                "optional": false,
+                                "variable": false
+                            }
+                        ],
+                        "returnType": "void"
+                    },
+                    {
+                        "name": "unsubscribeStepCounter",
+                        "description": "取消订阅计步传感器",
+                        "parameters": [],
+                        "returnType": "void"
+                    },
+                    {
+                        "name": "subscribeBarometer",
+                        "description": "订阅气压传感器数据变化",
+                        "parameters": [
+                            {
+                                "name": "object",
+                                "type": "SensorSubscribeBarometerParam",
+                                "optional": false,
+                                "variable": false
+                            }
+                        ],
+                        "returnType": "void"
+                    },
+                    {
+                        "name": "unsubscribeBarometer",
+                        "description": "取消订阅气压传感器",
+                        "parameters": [],
+                        "returnType": "void"
+                    },
+                    {
+                        "name": "subscribeHeartRate",
+                        "description": "订阅心率传感器数据变化",
+                        "parameters": [
+                            {
+                                "name": "object",
+                                "type": "SensorSubscribeHeartRateParam",
+                                "optional": false,
+                                "variable": false
+                            }
+                        ],
+                        "returnType": "void"
+                    },
+                    {
+                        "name": "unsubscribeHeartRate",
+                        "description": "取消订阅心率",
+                        "parameters": [],
+                        "returnType": "void"
+                    },
+                    {
+                        "name": "subscribeOnBodyState",
+                        "description": "订阅设备佩戴状态",
+                        "parameters": [
+                            {
+                                "name": "object",
+                                "type": "SensorSubscribeOnBodyStateParam",
+                                "optional": false,
+                                "variable": false
+                            }
+                        ],
+                        "returnType": "void"
+                    },
+                    {
+                        "name": "unsubscribeOnBodyState",
+                        "description": "取消订阅设备佩戴状态",
+                        "parameters": [],
+                        "returnType": "void"
+                    },
+                    {
+                        "name": "getOnBodyState",
+                        "description": "获取设备佩戴状态",
+                        "parameters": [
+                            {
+                                "name": "object",
+                                "type": "SensorGetOnBodyStateParam",
+                                "optional": false,
+                                "variable": false
+                            }
+                        ],
+                        "returnType": "void"
+                    }
+                ]
+            }
+        }
+    ]
+}

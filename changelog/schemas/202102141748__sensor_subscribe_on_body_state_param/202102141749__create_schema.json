@@ -1,0 +1,48 @@
+{
+    "id": "create_sensor_subscribe_on_body_state_param",
+    "author": "jinzw",
+    "changes": [
+        {
+            "createSchema": {
+                "name": "SensorSubscribeOnBodyStateParam",
+                "type": "object",
+                "description": "订阅设备佩戴状态",
+                "properties": [
+                    {
+                        "name": "success",
+                        "type": "function",
+                        "description": "穿戴状态改变后的回调函数/次",
+                        "optional": true,
+                        "parameters": [
+                            {
+                                "name": "result",
+                                "type": "SensorSubscribeOnBodyStateResult",
+                                "description": "设备佩戴状态"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "fail",
+                        "type": "function",
+                        "description": "接口调用失败的回调函数",
+                        "optional": true,
+                        "parameters": [
+                            {
+                                "name": "data",
+                                "type": "string",
+                                "optional": false,
+                                "variable": false
+                            },
+                            {
+                                "name": "code",
+                                "type": "string",
+                                "optional": false,
+                                "variable": false
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

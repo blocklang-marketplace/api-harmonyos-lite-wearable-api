@@ -1,0 +1,20 @@
+{
+    "id": "create_sensor_subscribe_heart_rate_result",
+    "author": "jinzw",
+    "changes": [
+        {
+            "createSchema": {
+                "name": "SensorSubscribeHeartRateResult",
+                "type": "object",
+                "description": "心率信息",
+                "properties": [
+                    {
+                        "name": "heartRate",
+                        "type": "number",
+                        "description": "心率值。255表示非法值"
+                    }
+                ]
+            }
+        }
+    ]
+}

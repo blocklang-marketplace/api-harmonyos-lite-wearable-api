@@ -1,0 +1,48 @@
+{
+    "id": "create_sensor_subscribe_step_counter_param",
+    "author": "jinzw",
+    "changes": [
+        {
+            "createSchema": {
+                "name": "SensorSubscribeStepCounterParam",
+                "type": "object",
+                "description": "订阅计步传感器的输入参数",
+                "properties": [
+                    {
+                        "name": "success",
+                        "type": "function",
+                        "description": "计步传感器数据改变后的回调函数",
+                        "optional": true,
+                        "parameters": [
+                            {
+                                "name": "result",
+                                "type": "SensorSubscribeStepCounterResult",
+                                "description": "获取到的计步器累积步数信息"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "fail",
+                        "type": "function",
+                        "description": "接口调用失败的回调函数",
+                        "optional": true,
+                        "parameters": [
+                            {
+                                "name": "data",
+                                "type": "string",
+                                "optional": false,
+                                "variable": false
+                            },
+                            {
+                                "name": "code",
+                                "type": "string",
+                                "optional": false,
+                                "variable": false
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

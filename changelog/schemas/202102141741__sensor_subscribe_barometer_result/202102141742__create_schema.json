@@ -1,0 +1,20 @@
+{
+    "id": "create_sensor_subscribe_barometer_result",
+    "author": "jinzw",
+    "changes": [
+        {
+            "createSchema": {
+                "name": "SensorSubscribeBarometerResult",
+                "type": "object",
+                "description": "气压传感器信息",
+                "properties": [
+                    {
+                        "name": "pressure",
+                        "type": "number",
+                        "description": "气压值，单位：帕斯卡"
+                    }
+                ]
+            }
+        }
+    ]
+}
